@@ -1,9 +1,8 @@
 ---
 title: "关于"
 url: "/about/"
-ShowReadingTime: false
-ShowWordCount: false
-ShowBreadCrumbs: false
+layout: "simple"
+showBreadcrumbs: false
 ---
 
 这里写点你自己的介绍，比如你是谁、平时在折腾什么、为什么开这个小站。

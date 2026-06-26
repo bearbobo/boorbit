@@ -1,76 +1,94 @@
-baseURL = "https://your-domain.com/"
+baseURL = "https://boorbit.com/"
 languageCode = "zh-cn"
-title = "我的小站"
-theme = "PaperMod"
-paginate = 10
+title = "BoOrbit"
+theme = "blowfish"
+
+defaultContentLanguage = "zh-cn"
 enableRobotsTXT = true
+enableEmoji = true
+hasCJKLanguage = true
+summaryLength = 30
 buildDrafts = false
 buildFuture = false
-buildExpired = false
+
+[pagination]
+  pagerSize = 10
 
 [taxonomies]
-  category = "categories"
   tag = "tags"
+  category = "categories"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
 [params]
-  env = "production"
-  defaultTheme = "auto"
-  ShowReadingTime = true
-  ShowShareButtons = true
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  ShowToc = true
-  ShowWordCount = true
-  ShowRssButtonInSectionTermList = true
-  comments = false
-  hidemeta = false
-  ShowFullTextinRSS = true
+  colorScheme = "blowfish"
+  defaultAppearance = "light"
+  autoSwitchAppearance = true
+  enableSearch = true
+  enableCodeCopy = true
+  mainSections = ["posts"]
 
-  [params.homeInfoParams]
-    Title = "你好，欢迎来到我的小站 👋"
-    Content = "这里记录自建应用折腾过程、生活随笔与摄影、读书笔记和学习总结。"
+  [params.author]
+    name = "Bobo"
+    headline = "记录自建应用折腾过程、生活随笔与摄影、读书笔记和学习总结。"
+    bio = "记录自建应用折腾过程、生活随笔与摄影、读书笔记和学习总结。"
+    links = [
+      { github = "https://github.com/bearbobo" },
+    ]
 
-  [[params.socialIcons]]
-    name = "github"
-    url = "https://github.com/你的用户名"
+  [params.homepage]
+    layout = "profile"
+    showRecent = true
+    showRecentItems = 8
+    showMoreLink = true
+    showMoreLinkDest = "posts"
+    cardView = true
 
-  [[params.socialIcons]]
-    name = "rss"
-    url = "/index.xml"
+  [params.article]
+    showDate = true
+    showAuthor = true
+    showHero = true
+    heroStyle = "background"
+    showBreadcrumbs = true
+    showReadingTime = true
+    showTableOfContents = true
+    showTaxonomies = true
+    sharingLinks = ["telegram", "whatsapp", "email"]
 
-[[menu.main]]
-  identifier = "home"
-  name = "首页"
-  url = "/"
-  weight = 10
+  [params.list]
+    showHero = false
+    showBreadcrumbs = true
+    showSummary = true
+    cardView = true
+    groupByYear = true
 
-[[menu.main]]
-  identifier = "categories"
-  name = "分类"
-  url = "/categories/"
-  weight = 20
+  [params.footer]
+    showMenu = true
+    showCopyright = true
+    showThemeAttribution = false
+    showScrollToTop = true
 
-[[menu.main]]
-  identifier = "archives"
-  name = "归档"
-  url = "/archives/"
-  weight = 30
+[menu]
+  [[menu.main]]
+    name = "首页"
+    pageRef = "/"
+    weight = 10
 
-[[menu.main]]
-  identifier = "search"
-  name = "搜索"
-  url = "/search/"
-  weight = 40
+  [[menu.main]]
+    name = "文章"
+    pageRef = "posts"
+    weight = 20
 
-[[menu.main]]
-  identifier = "about"
-  name = "关于"
-  url = "/about/"
-  weight = 50
+  [[menu.main]]
+    name = "分类"
+    pageRef = "categories"
+    weight = 30
+
+  [[menu.main]]
+    name = "关于"
+    pageRef = "about"
+    weight = 40
 
 [markup]
   [markup.highlight]
