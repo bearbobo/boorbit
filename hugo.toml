@@ -22,17 +22,19 @@ buildFuture = false
   home = ["HTML", "RSS", "JSON"]
 
 [params]
-  colorScheme = "blowfish"
-  defaultAppearance = "light"
-  autoSwitchAppearance = true
+  colorScheme = "avocado"
+  defaultAppearance = "dark"
+  autoSwitchAppearance = false
   enableSearch = true
   enableCodeCopy = true
   mainSections = ["posts"]
 
   [params.author]
-    name = "Bobo"
-    headline = "记录自建应用折腾过程、生活随笔与摄影、读书笔记和学习总结。"
-    bio = "记录自建应用折腾过程、生活随笔与摄影、读书笔记和学习总结。"
+    name = "BoOrbit"
+    headline = "AI · HomeLab · Cloud · Life  "
+    bio = "记录我的家庭实验室、开源应用、AI工具、技术学习与生活观察。"
+
+    image = "img/Bo.png"
     links = [
       { github = "https://github.com/bearbobo" },
     ]
@@ -40,10 +42,13 @@ buildFuture = false
   [params.homepage]
     layout = "profile"
     showRecent = true
-    showRecentItems = 8
+    showRecentItems = 6
     showMoreLink = true
     showMoreLinkDest = "posts"
     cardView = true
+    cardViewScreenWidth = false
+    layoutBackgroundBlur = true
+    homepageImage = "img/background.png"
 
   [params.article]
     showDate = true
